@@ -1,0 +1,75 @@
+Activate.mp3, Deactivate.mp3
+From provided Digipen sound assets - Utilities-Mine or System activation-13.wav
+
+Back.mp3
+From provided Digipen sound assets - UI_SoundPack8_Select_v2.wav, edited.
+
+BGM.mp3
+Made/Provided by Chunmook Kim
+
+Enemy_shoot1.mp3
+Originally from Freesound, 404796__owlstorm__retro-video-game-sfx-laser.wav, edited.
+https://freesound.org/people/OwlStorm/sounds/404796/
+
+EnemyHit.mp3
+Original recorded sound effect.
+
+Explosion1.mp3, Explosion2.mp3
+From provided Digipen sound assets,
+EFX EXT M4 Shots 02 B.wav,
+EFX EXT Mortar Explosion 08.wav, edited.
+
+Gatling.mp3
+From provided Digipen sound assets, Alliance-AssaultRifle_05-Single_Shot-04.wav, edited.
+
+GenSound.mp3
+From Freesound, 346116__lulyc__retro-game-heal-sound.wav.
+https://freesound.org/people/lulyc/sounds/346116/
+
+machinegun_spin.mp3
+Originally from Freesound, 102710__cambra__table-fan.wav, edited.
+https://freesound.org/people/Cambra/sounds/102710/
+
+MG_cooldown.mp3
+From Freesound, 334672__yoyodaman234__intense-sizzling-4.wav
+https://freesound.org/people/Yoyodaman234/sounds/334672/
+
+MG_shoot.mp3, MG_shot.mp3, MG_shortend.mp3
+Originally from Freesound, 153492__steelskull__minigun-shooting-awesome-sound.wav, edited.
+https://freesound.org/people/Steelskull/sounds/153492/
+
+PentagonGen.mp3
+Originally from Freesound, 58920__mattwasser__retro-game-jingle.aiff, edited.
+https://freesound.org/people/mattwasser/sounds/58920/
+
+Pistol.mp3
+From provided Digipen sound assets, Alliance-AssaultRifle_05-Single_Shot-04.wav
+
+Pistol_charge.mp3
+Originally from Freesound, 412170__screamstudio__arcade-boost.wav, edited.
+https://freesound.org/people/ScreamStudio/sounds/412170/
+
+PlayerHit.mp3
+Original sound effect.
+
+RectangleGen.mp3
+Originally from Freesound, 434837__notyermom__teleport.wav, edited.
+https://freesound.org/people/notyermom/sounds/434837/
+
+Select.mp3
+Originally from provided Digipen sound assets, ui_SoundPack04 - Back Version4.wav, edited.
+
+Shotgun.mp3
+Originally from provided Digipen sound assets, Resistance-AssaultRifle_03-Single_Shot-04.wav, edited.
+
+Shotgun_reload.mp3
+From Freesound, 455910__bolkmar__shotgun-magazine-1.wav.
+https://freesound.org/people/bolkmar/sounds/455910/
+
+
+Warning.mp3
+Originally from Freesound, 450617__breviceps__8-bit-time-s-up.wav, edited.
+https://freesound.org/people/Breviceps/sounds/450617/
+
+
+

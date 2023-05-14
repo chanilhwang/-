@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glTest", "glTest\glTest.vcxproj", "{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Debug|x64.ActiveCfg = Debug|x64
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Debug|x64.Build.0 = Debug|x64
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Debug|x86.ActiveCfg = Debug|Win32
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Debug|x86.Build.0 = Debug|Win32
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Release|x64.ActiveCfg = Release|x64
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Release|x64.Build.0 = Release|x64
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Release|x86.ActiveCfg = Release|Win32
+		{C0907D09-F7A8-4D7C-BAC0-A9A8F33E706C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12712625-F0A3-4396-848E-BDBD901F93C4}
+	EndGlobalSection
+EndGlobal

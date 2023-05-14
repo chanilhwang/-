@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "DashAnimation",
+		uint64 ResourceId = 584366b222c21b65,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 90,
+		uint FrameSizeY = 105,
+		uint FrameCount = 7,
+		float FrameDelay = 0.0500000007,
+		float OriginX = 45,
+		float OriginY = 52.5,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

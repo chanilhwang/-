@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Jumping",
+		uint64 ResourceId = 585fa397ff994825,
+	},
+},

@@ -1,0 +1,74 @@
+class PlayerAnimation : ZilchComponent
+{
+    [Property]
+    var PlayerStand : SpriteSource = null;
+    [Property]
+    var PlayerWalk : SpriteSource = null;
+    [Property]
+    var PlayerAttack : SpriteSource = null;
+    [Property]
+    var PlayerDash : SpriteSource = null;
+    
+    var AttackTime :Real;
+    var DashingTime :Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.Sprite.SpriteSource == this.PlayerStand)
+        {
+            if(Zero.Keyboard.KeyIsDown(Keys.Left) || Zero.Keyboard.KeyIsDown(Keys.Right))
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerWalk;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.Z))
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerAttack;
+                this.AttackTime = 0.5;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.C))
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerDash;
+                this.DashingTime = 0.15;
+            }
+        }
+
+        else if(this.Owner.Sprite.SpriteSource == this.PlayerWalk)
+        {
+            if(Zero.Keyboard.KeyIsDown(Keys.Left) == false && Zero.Keyboard.KeyIsDown(Keys.Right) == false)
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerStand;
+            }
+
+            if(Zero.Keyboard.KeyIsPressed(Keys.Z))
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerAttack;
+                this.AttackTime = 0.5;
+            }
+          
+            if(Zero.Keyboard.KeyIsPressed(Keys.C))
+            {
+                this.Owner.Sprite.SpriteSource = this.PlayerDash;
+                this.DashingTime = 0.15;
+            }
+        }
+        
+        else if(this.Owner.Sprite.SpriteSource == this.PlayerDash)
+        {
+            this.DashingTime -= event.Dt;
+            if(this.DashingTime <= 0)
+             this.Owner.Sprite.SpriteSource = this.PlayerStand;
+        }
+        
+        else if(this.Owner.Sprite.SpriteSource == this.PlayerAttack)
+        {
+            this.AttackTime -= event.Dt;
+            if(this.AttackTime <= 0)
+                this.Owner.Sprite.SpriteSource = this.PlayerStand;
+        }
+    }
+}

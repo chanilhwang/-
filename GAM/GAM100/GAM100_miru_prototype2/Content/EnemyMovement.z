@@ -1,0 +1,160 @@
+class MeleeEnemyMovement : ZilchComponent
+{
+    [Property]
+    var Player : CogPath;
+    [Property]
+    var OwnPosition : Real;
+    [Property]
+    var ChasingSpeed : Real = 1;
+    [Property]
+    var ViewRangeBetweenPlayer : Real = 5;
+    [Property]
+    var ReadyTimeToAttack : Real = 0.5;
+    [Property]
+    var AttackTime : Real = 0.2;
+    [Property]
+    var AttackRange : Real3 = Real3(2.0,0,0);
+    [Property]
+    var PatrolSpeed : Real = 1;
+    [Property]
+    var PatrolRange : Real = 5;
+
+    var AttackCool : Real = 0;
+
+    var Dashing : Boolean = false;
+    var DashingTime : Real = 0.2;
+    var Invincible : Boolean= false;
+    var Chaspeed : Real;
+    var Direction : Boolean = true;
+    var Movement : Real3 = Real3(0,0,0);
+    var AttackBox : Archetype = Archetype.AttackBoxForEnemy;
+    var IsAttacking : Boolean = true;
+    var AttackArchetype : Cog;
+
+    function Initialize(init : CogInitializer)
+    {
+        this.OwnPosition = this.Owner.Transform.Translation.X;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Player.Cog != null)
+        {
+            var playerPosition = this.Player.Cog.Transform.Translation.X;
+            var ownerPosition = this.Owner.Transform.Translation.X;
+            var distanceBetween = Math.Abs(playerPosition - ownerPosition);
+            
+            this.Chaspeed = 1;
+            
+            if(this.AttackCool > this.ReadyTimeToAttack)
+            {
+                if(this.AttackCool < this.AttackTime + this.ReadyTimeToAttack)
+                {
+                    if(this.IsAttacking)
+                        this.Attack();
+                    this.AttackCool += event.Dt;
+                }
+                
+                else
+                {
+                    this.AttackCool = 0;
+                    this.IsAttacking = true;
+                    if(playerPosition > ownerPosition)
+                        this.Movement = Real3(1,0,0);
+                    else
+                        this.Movement = Real3(-1,0,0);
+                }
+            }
+            
+            else if(distanceBetween < this.ViewRangeBetweenPlayer || this.AttackCool > 0)
+            {
+                if(distanceBetween <= this.AttackRange.X || this.AttackCool > 0)
+                {
+                        this.Ready();
+                        this.AttackCool += event.Dt;
+                }
+                
+                else
+                {
+                        this.Chasing();
+                        this.AttackCool = 0;
+                }
+            }
+            
+            if(this.Movement == Real3(1,0,0))
+            {
+                this.Owner.Sprite.FlipX = false;
+                this.Direction = true;
+            }
+        
+            else if(this.Movement == Real3(-1,0,0))
+            {
+                this.Owner.Sprite.FlipX = true;
+                this.Direction = false;
+            }
+        }
+            this.Owner.Transform.Translation += this.Chaspeed * this.PatrolSpeed * this.Movement * event.Dt;
+    }
+    
+    function Patrol()
+    {
+        Console.WriteLine("Patrol");
+        this.PatrolSpeed = 2;
+    }
+
+    function Return()
+    {
+        Console.WriteLine("Return");
+        var ownerPosition = this.Owner.Transform.Translation.X;
+        
+        if(this.Direction)
+        {
+            this.Movement = Real3(-1,0,0);
+        }
+        else
+        {
+            this.Movement = Real3(1,0,0);
+        }
+        this.PatrolSpeed = 5;
+    }
+    
+    function Chasing()
+    {
+        
+        
+        var playerPosition = this.Player.Cog.Transform.Translation.X;
+        var ownerPosition = this.Owner.Transform.Translation.X;
+        
+        if(playerPosition > ownerPosition)
+            this.Movement = Real3(1.0,0.0,0.0);
+        else
+            this.Movement = Real3(-1.0,0.0,0.0);
+        
+        this.Chaspeed = this.ChasingSpeed;
+    }
+
+    function Ready()
+    {
+        
+        this.Movement = Real3(0,0,0);
+    }
+    
+    function Attack()
+    {
+        this.IsAttacking = false;
+        
+        if(this.Direction)
+            this.AttackArchetype = this.Space.CreateAtPosition(this.AttackBox,this.Owner.Transform.Translation + this.AttackRange);
+        else
+            this.AttackArchetype = this.Space.CreateAtPosition(this.AttackBox,this.Owner.Transform.Translation - this.AttackRange);
+    }
+    
+    function Dash()
+    {
+        this.Dashing = true;
+        this.DashingTime = 0.2;
+        this.Invincible = true;
+    }
+}

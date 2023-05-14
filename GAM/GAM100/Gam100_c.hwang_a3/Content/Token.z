@@ -1,0 +1,30 @@
+class Token : ZilchComponent
+{
+    [Property]
+    var Banana : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        
+        if(otherObject.Name == "Coin1")
+        {
+            this.Banana += 1;
+        }
+        
+        if(otherObject.Name == "Coin2")
+        {
+            this.Banana += 1;
+        }
+        
+        if(otherObject.Name == "Coin3")
+        {
+            this.Banana += 1;
+        }
+    }
+}

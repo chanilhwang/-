@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "KeyLogic",
+		uint64 ResourceId = 585f9568b537ac76,
+	},
+},

@@ -1,0 +1,24 @@
+class CameraViewpoint : ZilchComponent
+{
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+  }
+
+  function OnLogicUpdate(event : UpdateEvent)
+  {
+    if(Zero.Keyboard.KeyIsDown(Keys.Left))
+    {
+      var cameraPos = this.Owner.Transform.LocalTranslation;
+      cameraPos.X -= 1.0;
+      this.Owner.Transform.LocalTranslation = cameraPos;
+    }
+
+    if(Zero.Keyboard.KeyIsDown(Keys.Right))
+    {
+      var cameraPos = this.Owner.Transform.LocalTranslation;
+      cameraPos.X += 1.0;
+      this.Owner.Transform.LocalTranslation = cameraPos;
+    }
+  }
+}

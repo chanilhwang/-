@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "CameraViewpoint",
+		uint64 ResourceId = 585e5652dcf39c71,
+	},
+},

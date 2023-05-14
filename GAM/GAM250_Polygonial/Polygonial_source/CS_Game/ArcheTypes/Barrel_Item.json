@@ -1,0 +1,34 @@
+{
+  "Name": "Barrel_Item",
+  "Archetype": "Barrel_Item",
+  "Transform_Component": {
+    "translation": [
+      -65.0,
+      180.5
+    ],
+    "rotation": 4.8957624435424809,
+    "scale": [
+      100.0,
+      100.0
+    ],
+    "depth": 0.5
+  },
+  "Graphics_Component": {
+    "drawspace": "World",
+    "texture": "Textures/Barrel_Item.png"
+  },
+  "Physics_Component": {},
+  "ComponentsToBeAdded": [
+    "Item_Component",
+    "SphereCollider_Component"
+  ],
+  "Item_Component": {
+    "Item_Name": "Barrel",
+    "Increased_dmg": 0,
+    "Increased_barrel": 1,
+    "Increased_hp": 0,
+    "Increased_lifetime": 0.0,
+    "Increased_speed": 0.0,
+    "decreased_delay": 1.0
+  }
+}

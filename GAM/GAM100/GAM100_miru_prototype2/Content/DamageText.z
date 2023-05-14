@@ -1,0 +1,20 @@
+class DamageText : ZilchComponent
+{
+    [Dependency]
+    var Transform : Transform;
+    var Alpha : Real= 0.9;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Alpha -=5*event.Dt;
+        this.Transform.Translation +=5*Real3(0.0,event.Dt,0.0);
+        this.Owner.SpriteText.Color -= 5*Real4(0.0,0.0,0.0,event.Dt);
+        
+        if(this.Alpha <=0.0)
+            this.Owner.Destroy();
+    }
+}

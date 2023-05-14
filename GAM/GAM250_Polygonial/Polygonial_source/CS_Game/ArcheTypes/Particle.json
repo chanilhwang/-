@@ -1,0 +1,15 @@
+{
+    "Transform_Component":
+    {
+        "translation":[0,0],
+        "scale":[100,100]
+    },
+  "Graphics_Component": {
+    "texture": "Textures/Particle_Red.png"
+  },
+    "Physics_Component":
+    {
+
+    },
+    "ComponentsToBeAdded":[]
+}

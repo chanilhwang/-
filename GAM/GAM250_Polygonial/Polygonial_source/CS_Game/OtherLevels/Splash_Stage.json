@@ -1,0 +1,50 @@
+{
+    "objects": [
+        {
+            "Name": "DIGIPEN_Logo",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    265.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    500.0,
+                    150.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/DigipenLogo.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+            ]
+        },
+        {
+            "Name": "FMOD_Logo",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    -316.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    500.0,
+                    150.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/fmod.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+            ]
+        }
+    ]
+}

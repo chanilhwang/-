@@ -1,0 +1,44 @@
+{
+  "Name": "shoo",
+  "Archetype": "ShootingEnemy",
+  "Transform_Component": {
+    "translation": [
+      341.0139465332031,
+      -54.42837905883789
+    ],
+    "rotation": 0.1321735382080078,
+    "scale": [
+      100.0,
+      100.0
+    ],
+    "depth": 0.5
+  },
+  "Graphics_Component": {
+    "drawspace": "World",
+    "texture": "Textures/box.png"
+  },
+  "Physics_Component": {},
+  "ComponentsToBeAdded": [
+    "Enemy_Component",
+    "SphereCollider_Component",
+    "Shoot_Component"
+  ],
+  "Enemy_Component": {
+    "Max_Health": 3,
+    "Damage": 1,
+    "Color": "NULL",
+    "Shape": "NULL"
+  },
+  "SphereCollider_Component": {},
+  "Shoot_Component": {
+    "Target_Name": "Player",
+    "Bullet_Speed": 1000.0,
+    "Bullet_size": [
+      40.0,
+      20.0
+    ],
+    "Bullet_Damage": 1,
+    "Bullet_Duration": 2.0,
+    "delay": 0.30000001192092898
+  }
+}

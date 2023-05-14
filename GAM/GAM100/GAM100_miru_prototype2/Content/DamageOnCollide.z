@@ -1,0 +1,63 @@
+class DamageOnCollide : ZilchComponent
+{
+    [Property]
+    var Damage : Real = 10.0;
+    
+    [Property]
+    var SendsDeathEvent : Boolean = true;
+
+    [Property]
+    var DieOnCollide : Boolean = true;
+    
+    var OriginRoot : Cog = null;
+    var DamageText : Archetype = Archetype.DamageTextForEnemy;
+    
+    sends Death : ZilchEvent;
+    sends ApplyDamage : DamageEvent;
+    var IsCollided : Boolean = false;
+    var DestroyingTime : Real = 0.5;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.DestroyingTime -= event.Dt;
+        if(this.DestroyingTime <= 0)
+            this.Owner.Destroy();
+    }
+
+    function OnCollisionStarted(collisionEvent : CollisionEvent)
+    {
+        var otherObject = collisionEvent.OtherObject;
+        var otherDamageOnCollide = otherObject.DamageOnCollide;
+        var otherRoot = otherObject.FindRoot();
+        
+        if(otherRoot == this.OriginRoot)
+        {
+            return;
+        }
+        var health = otherObject.Health;
+        if(health != null && !this.IsCollided)
+        {
+            var firstPoint = collisionEvent.FirstPoint;
+            var damageEvent = DamageEvent();
+            damageEvent.Normal = firstPoint.WorldNormalTowardsOther;
+            damageEvent.Damage = this.Damage;
+            damageEvent.WorldPoint = firstPoint.WorldPoint;
+            otherObject.DispatchEvent(Events.ApplyDamage, damageEvent);
+            
+            this.Space.CreateAtPosition(this.DamageText, this.Owner.Transform.Translation + Real3(0,3,0));
+            this.Space.CreateAtPosition(Archetype.HitToPlayer, this.Owner.Transform.Translation);
+        }
+        
+        if(this.SendsDeathEvent)
+        {
+            var toSend = ZilchEvent();
+            this.Owner.DispatchEvent(Events.Death, toSend);
+        }
+    }
+}

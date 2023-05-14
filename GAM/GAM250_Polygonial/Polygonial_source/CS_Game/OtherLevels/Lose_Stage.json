@@ -1,0 +1,27 @@
+{
+    "objects": [
+        {
+            "Name": "Game_Over",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    0.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    800.0,
+                    500.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/restart_introduction.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+            ]
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "objects": [
+        {
+            "Name": "selector_1",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    -120.0,
+                    256.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    100.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/selector_1.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "selector_2",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    120.0,
+                    256.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    100.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/selector_2.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "quit_check",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    200.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    600.0,
+                    300.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/quit_check.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "how_to_pick",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    -350.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    700.0,
+                    60.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/select_instruct.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "yes_Button",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    400.0,
+                    -186.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    300.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/yes_Button.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "no_Button",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    -400.0,
+                    -186.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    300.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/no_Button.png"
+            },
+            "Physics_Component": {}
+        }
+    ]
+}

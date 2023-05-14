@@ -1,0 +1,59 @@
+class PlayerController : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+
+        var startPosition = this.Space.LevelSettings.LevelVars.PlayerPosition;
+
+        this.Owner.Transform.Translation = startPosition;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var movement = Real3(0.0,0.0,0.0);
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Left))
+        {
+            movement.X -= 1.0;
+            this.Owner.Sprite.FlipX = true;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Right))
+        {
+            movement.X += 1.0;
+            this.Owner.Sprite.FlipX = false;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Up))
+        {
+            this.Owner.SweptController.Jump();
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Up) == false)
+        {
+            if(this.Owner.SweptController.Jumping)
+            {
+              this.Owner.SweptController.JumpCancel();
+            }
+        }
+        
+        this.Owner.SweptController.Update(movement, event.Dt);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+      //when hitting a checkpoint, save this position in the level
+      if(event.OtherObject.CheckPoint != null)
+      {
+        var checkpointPosition = event.OtherObject.Transform.Translation;
+
+        checkpointPosition.Y = this.Owner.Transform.Translation.Y;
+
+        this.Space.LevelSettings.LevelVars.PlayerPosition = checkpointPosition;
+      }
+    }
+}

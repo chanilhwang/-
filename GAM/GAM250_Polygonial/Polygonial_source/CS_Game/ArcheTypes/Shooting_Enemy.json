@@ -1,0 +1,15 @@
+{
+    "Transform_Component":
+    {
+        "scale":[100,100]
+    },
+    "Graphics_Component":
+    {
+    },
+    "Physics_Component":
+    {
+
+    },
+
+    "ComponentsToBeAdded":["Enemy_Component", "Shoot_Component", "Chase_Component", "SphereCollider_Component"]
+}

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Token",
+		uint64 ResourceId = 585f0f8d4a6007cc,
+	},
+},

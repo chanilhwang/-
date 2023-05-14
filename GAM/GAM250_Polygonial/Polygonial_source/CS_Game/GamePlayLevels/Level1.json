@@ -1,0 +1,99 @@
+{
+    "objects": [
+        {
+            "Name": "Player",
+            "Archetype": "Player",
+            "Transform_Component": {
+                "translation": [
+                    -104.0,
+                    -16.5
+                ],
+                "rotation": 4.158559799194336,
+                "scale": [
+                    100.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "World",
+                "texture": "Textures/box.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+                "Player_Component",
+                "SphereCollider_Component"
+            ],
+            "Player_Component": {
+                "invincibility": 0.004999999888241291,
+                "speed": 400.0,
+                "invincible_mode": "",
+                "hp": 3,
+                "Pistol_Speed": 1000.0,
+                "Pistol_Bullet_Size": [
+                    40.0,
+                    20.0
+                ],
+                "Pistol_Damage": 1,
+                "Pistol_Duration": 2.0,
+                "Shotgun_Speed": 1000.0,
+                "Shotgun_Bullet_Size": [
+                    40.0,
+                    20.0
+                ],
+                "Shotgun_Damage": 1,
+                "Shotgun_Duration": 2.0,
+                "Shotgun_Angle": 0.5,
+                "Shotgun_Bullet_Number": 20,
+                "Gatling_Speed": 1000.0,
+                "Gatling_Bullet_Size": [
+                    40.0,
+                    20.0
+                ],
+                "Gatling_Damage": 1,
+                "Gatling_Duration": 2.0,
+                "Gatling_Bullet_Number": 3,
+                "Gatling_Distance_Between_Bullets": 100.0,
+                "Dieing_Time": 3.0,
+                "Dieing_Rotation_Radian": -431602080.0,
+                "Dieing_Reducing_Scale": -431602080.0
+            },
+            "SphereCollider_Component": {}
+        },
+        {
+            "Name": "object34",
+            "Archetype": "Enemy",
+            "Transform_Component": {
+                "translation": [
+                    118.0,
+                    219.5
+                ],
+                "rotation": 1.067138433456421,
+                "scale": [
+                    100.0,
+                    100.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "World",
+                "texture": "Textures/box.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+                "EnemyGenerator_Component"
+            ],
+            "EnemyGenerator_Component": {
+                "# of Waves": 2,
+                "Randomize Wave #0": 1,
+                "Enemy Count #0": 5,
+                "Gentimer #0": 0.0,
+                "Time till Next Wave #0": 0.0,
+                "Randomize Wave #1": 1,
+                "Enemy Count #1": 0,
+                "Gentimer #1": 0.0,
+                "Time till Next Wave #1": 0.0
+            }
+        }
+    ]
+}

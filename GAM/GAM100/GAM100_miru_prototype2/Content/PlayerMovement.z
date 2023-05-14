@@ -1,0 +1,135 @@
+class Invincible : ZilchEvent
+{
+    sends Invincible : Invincible;
+    
+    var IsInvincible : Boolean;
+}
+
+class PlayerMovement : ZilchComponent
+{
+    [Dependency]
+    var Transform : Transform;
+    [Property]
+    var Speed : Real = 5.0;
+    [Property]
+    var DashingTime : Real = 0.5;
+    [Property]
+    var AttackTime : Real = 1;
+    
+    
+    var StateSprite : SpriteSource = SpriteSource.State;
+    
+    var Movement : Real3 = Real3();
+    var Direction : Boolean = true;
+    var Dashing : Boolean= false;
+    var Invincible : Boolean= false;
+    var Attacking : Boolean = false;
+    var AttackBox : Archetype = Archetype.AttackBox;
+    var AttackArchetype : Cog;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+    }
+
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        if (event.Key == Keys.Right)
+        {
+            this.Movement +=  Real3(1.0, 0.0, 0.0);
+
+            this.Owner.Sprite.FlipX = false;
+            this.Direction =true;
+            
+        }
+        
+         if (event.Key == Keys.Left)
+        {
+            this.Movement +=  Real3(-1.0, 0.0, 0.0);
+        
+            this.Owner.Sprite.FlipX = true;
+            this.Direction = false;
+            
+        }
+        
+        if(!this.Dashing)
+        {
+            if(event.Key == Keys.C)
+            {
+                this.Dashing = true;
+                this.DashingTime = 0.15;
+                this.Invincible = true;
+            }
+            
+            if(event.Key == Keys.Z)
+            {
+                if(!this.Attacking)
+                {
+                    this.Attacking = true;
+                    this.AttackTime = 0.5;
+                    if(this.Direction)
+                        this.AttackArchetype = this.Space.CreateAtPosition(this.AttackBox,this.Transform.Translation +Real3(1.5,0.0,0.0));
+                    else
+                        this.AttackArchetype = this.Space.CreateAtPosition(this.AttackBox,this.Transform.Translation -Real3(1.5,0.0,0.0));
+                }
+            }
+        }
+    }
+    
+    function OnKeyUp(event : KeyboardEvent)
+    {
+        if (event.Key == Keys.Right)
+            this.Movement -=  Real3(1.0, 0.0, 0.0);
+        if (event.Key == Keys.Left)
+            this.Movement -=  Real3(-1.0, 0.0, 0.0);
+   }
+
+   function OnLogicUpdate(event : UpdateEvent)
+   {
+        if(this.Attacking)
+        {
+            this.AttackTime -= event.Dt;
+            
+            this.Dashing = false;
+            
+            if(this.AttackTime <= 0)
+            {
+                this.Attacking = false;
+            }
+        }
+        
+        else if(this.Dashing)
+        {
+            if(this.Direction)
+                this.Transform.Translation += 4*Real3(1.0,0.0,0.0)*event.Dt*this.Speed;
+            else
+                this.Transform.Translation += 4*Real3(-1.0,0.0,0.0)*event.Dt*this.Speed;
+            
+            this.DashingTime -= event.Dt;
+            this.AttackTime = 2 * event.Dt;
+             
+            if(this.DashingTime<=0)
+            {
+                this.Dashing = false;
+                this.Invincible = false;
+                var invincible : Invincible = new Invincible();
+                invincible.IsInvincible = this.Invincible;
+                this.Owner.DispatchEvent(Events.Invincible,invincible);
+            }
+        }
+
+        if(!this.Dashing && !this.Attacking)
+        {
+            this.Transform.Translation += this.Movement * event.Dt * this.Speed;
+        }
+        
+        if(this.Invincible)
+        {
+            var invincible : Invincible = new Invincible();
+            invincible.IsInvincible = this.Invincible;
+            this.Owner.DispatchEvent(Events.Invincible,invincible);
+        }
+    }
+}

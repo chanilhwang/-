@@ -1,0 +1,2 @@
+call CS_AutoUnzipForDebugging.bat
+call CS_AutoGenerate.bat

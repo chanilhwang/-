@@ -1,0 +1,11 @@
+Name: Yongwon, Cho
+Role: Producer
+Main Contributions: Art Assets(Special Tiles) ,Sound effects, Special Tiles, Tiles Manager, Videos, Marketing Material
+Files: (SOURCE) tile.cpp, tile_Manager.cpp
+       (ARTS)   Texture files include in "Textures\Tile"
+       (SOUNDS) enemy_death1.wav, enemy_death2.wav, enemy_death3.wav 
+Personal Notes: I though I've done a lot of jobs as a producer mostly about "communication". However, I realized that small teams do not need communicator. Furthermore, I regret that I hesitated to ask my team members even though I had a lot of things to finish quickly if I had asked about minor things.
+		Even though, we had a hard times to makes a game, I am relatively satisfied with the result. Especially, I think this game was a game that every team member wants to make. It was a great works that everyone spent a lot of time adjusting things what we want!
+		I am saddened by the fact that I spent too much time in the parts other than coding. Personally, I would like to be able to focus on the code in the next semester.
+		
+

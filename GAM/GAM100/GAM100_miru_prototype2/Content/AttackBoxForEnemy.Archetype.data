@@ -1,0 +1,49 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "AttackCollider",
+	},
+	Archetyped = 
+	{
+		string Name = "584348f9ec0f21e6:AttackBoxForEnemy",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [3, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "58434a20a411f4e9:Enemy",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
+	},
+	RigidBody = 
+	{
+		bool Static = true,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = true,
+		bool Mode2D = false,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	DamageOnCollideOnEnemy = 
+	{
+		float Damage = 1,
+		bool SendsDeathEvent = false,
+		bool DieOnCollide = true,
+	},
+},

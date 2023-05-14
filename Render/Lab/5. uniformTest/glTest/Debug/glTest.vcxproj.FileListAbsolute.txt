@@ -1,0 +1,2 @@
+C:\Users\user\Downloads\Sc\전공\Render\Lab\glTest\glTest\Debug\glTest.vcxproj.CopyComplete
+D:\Private\Sc\전공\Render\Lab\5. uniformTest\glTest\Debug\glTest.vcxproj.CopyComplete

@@ -1,0 +1,9 @@
+Name: Gyuhyeon, Lee
+Role: Lead Designer
+Main contributions: Player, Graphics, Collision System, Obstacle System, Upgrade System, Splash Screen, Main Menu, Enemy AI, FMOD, Art Asset(Everything else except special tiles), Music(BGM, Player SFX)
+Files: (SOURCE) bullet.cpp, camera.cpp, ending.cpp, enemy.cpp, fmod_general.cpp, game_play_level.cpp, level_info.cpp, main_menu.cpp, obstacle.cpp, particle.cpp, player.cpp, splash_screen.cpp, tile_info.cpp, time_manager.cpp, upgrade_level.cpp
+         (ART) Every Art Assets except the ones that are inside Folder "//Textures//Tile"
+         (MUSIC) Every Music Assets except enemy_death1, 2, 3.wav
+Personal Notes : As a game designer, I always wanted to make a game that has my art & music assets, and this game is the one. Although there are some regrets and fights between team members, I pretty much love the outcome.
+	           I learned that I should never just anticipate someone to do certain work, because they might not really notice about it. In next project, I will make clear for team members what is our goal and to achieve that goal, what each memeber should do.
+	           I also learned how powerful and dangerous the C++ is. It is definitely worth studying, and I really like this language! Special thanks to those who encouraged me to keep work while having a hard time!

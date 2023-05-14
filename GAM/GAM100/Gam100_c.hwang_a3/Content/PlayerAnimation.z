@@ -1,0 +1,51 @@
+class PlayerAnimation : ZilchComponent
+{
+    [Property]
+    var PlayerStand : SpriteSource = null;
+
+    [Property]
+    var PlayerWalk : SpriteSource = null;
+
+    [Property]
+    var PlayerJump : SpriteSource = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.Sprite.SpriteSource == this.PlayerStand)
+    {
+        if(Zero.Keyboard.KeyIsDown(Keys.Left) || Zero.Keyboard.KeyIsDown(Keys.Right))
+  {
+    this.Owner.Sprite.SpriteSource = this.PlayerWalk;
+  }
+
+  if(Zero.Keyboard.KeyIsPressed(Keys.Up))
+  {
+    this.Owner.Sprite.SpriteSource = this.PlayerJump;
+  }
+    }
+    else if(this.Owner.Sprite.SpriteSource == this.PlayerWalk)
+    {
+        if(Zero.Keyboard.KeyIsDown(Keys.Left) == false && Zero.Keyboard.KeyIsDown(Keys.Right) == false)
+  {
+    this.Owner.Sprite.SpriteSource = this.PlayerStand;
+  }
+
+  if(Zero.Keyboard.KeyIsPressed(Keys.Up))
+  {
+    this.Owner.Sprite.SpriteSource = this.PlayerJump;
+  }
+    }
+    else if(this.Owner.Sprite.SpriteSource == this.PlayerJump)
+    {
+        if(this.Owner.SweptController.Grounded)
+  {
+    this.Owner.Sprite.SpriteSource = this.PlayerStand;
+  }
+    }
+    }
+}

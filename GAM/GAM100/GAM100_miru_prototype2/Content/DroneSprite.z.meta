@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DroneSprite",
+		uint64 ResourceId = 58437562cbd22d01,
+	},
+},

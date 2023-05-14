@@ -1,0 +1,70 @@
+class DamageEvent : ZilchEvent
+{
+    var Damage : Real = 0.0;
+    var Normal : Real3 = Real3(0.0, 0.0, 0.0);
+    var WorldPoint : Real3 = Real3(0.0, 0.0, 0.0);
+}
+
+class Health : ZilchComponent
+{
+    [Property]
+    var MaxHealth : Real = 50.0;
+    var CurrentHealth : Real = 50.0;
+    var IsInvincible : Boolean = false;
+    
+    [Property]
+    var DestroyAtZeroHealth : Boolean = true;
+    
+    [Property]
+    var DamageScalar : Real = 1.0;
+    
+    sends Death : ZilchEvent;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.CurrentHealth = this.MaxHealth;
+        Zero.Connect(this.Owner, Events.ApplyDamage, this.OnApplyDamage);
+        Zero.Connect(this.Owner, Events.Invincible, this.OnInvincible);
+    }
+    
+    function OnApplyDamage(damageEvent : DamageEvent)
+    {
+        this.ApplyDamage(damageEvent.Damage);
+    }
+    
+    function OnInvincible(event : Invincible)
+    {
+        if(event.IsInvincible)
+            this.IsInvincible = true;
+        else
+            this.IsInvincible = false;
+    }
+    
+    function ApplyDamage(damage : Real)
+    {
+        if(!this.IsInvincible)
+        {
+            // Compute the total damage based upon our damage scalar.
+            damage = damage * this.DamageScalar;
+            
+            this.CurrentHealth -= damage;
+            // Clamp our current health (in my case I don't want to have
+            // to heal through negative health so I clamp to 0).
+            this.CurrentHealth = Math.Clamp(this.CurrentHealth, 0.0, this.MaxHealth);
+            
+            // If we have no health.
+            if(this.CurrentHealth <= 0.0)
+            {
+                // Let anyone listening know we just died.
+                var toSend = ZilchEvent();
+                this.Owner.DispatchEvent(Events.Death, toSend);
+                
+                // And if the property is set destroy ourself.
+                if(this.DestroyAtZeroHealth)
+                {
+                    this.Owner.Destroy();
+                }
+            }
+        }
+    }
+}

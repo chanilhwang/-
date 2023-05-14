@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{33e0ecaa-04bd-4dfa-8678-58aef2264a7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bullet">
+      <UniqueIdentifier>{0b448abe-6139-4aea-b733-6bf499e94771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{2a4181a9-14d1-432e-92df-1dd8dd0d5402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{cc6ac097-4121-441d-9c95-018a98641d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{201e1fac-09f8-4726-ae4d-238cc572bc66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels">
+      <UniqueIdentifier>{c1e233fe-4161-42f3-baac-46b64c042c39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\Game Play Level">
+      <UniqueIdentifier>{d1495c7c-328f-410f-b85a-b31041d59582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\SplashScreen">
+      <UniqueIdentifier>{7b38fd2a-8549-4c95-9638-e78f76afcefe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects">
+      <UniqueIdentifier>{4e060649-06da-4525-a07a-934123a10c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects\Player">
+      <UniqueIdentifier>{7bb9c3d1-3113-486e-a9b6-bbd114851a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects\ObjectManager">
+      <UniqueIdentifier>{ace26340-0873-4009-b94f-3639188a0baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects\Enemy">
+      <UniqueIdentifier>{ebed58f4-6f37-453e-b182-afae1908d3a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level_Info">
+      <UniqueIdentifier>{68716a80-2bbe-47fe-a434-5cee33978173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tile_Info">
+      <UniqueIdentifier>{6b945840-3e6e-4330-8b36-1c6f03994b93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FMOD">
+      <UniqueIdentifier>{0fabd16e-2bfe-4673-b580-b5b2175f3b8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TimeManager">
+      <UniqueIdentifier>{bda693d6-bee9-4dbf-8863-b625b116a9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\MainMenu">
+      <UniqueIdentifier>{f093bfed-2a0b-4485-9de7-69481c75ee0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects\Particle">
+      <UniqueIdentifier>{9694f269-04d2-4f11-b615-5816b15d4d0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{82fb03e9-cf93-4f52-9d89-20768af044e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\Ending">
+      <UniqueIdentifier>{5801e4ba-e0b5-4cf3-abb5-f715fc51cd7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\Upgrade Level">
+      <UniqueIdentifier>{d6854f43-6ca7-40df-95ac-5b09b5f56df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Levels\Tutorial">
+      <UniqueIdentifier>{729c0f68-4463-40b3-8b54-0fc8378a7a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Objects\Obstacle">
+      <UniqueIdentifier>{a6412861-744b-4130-95f8-2b63108d9705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tile">
+      <UniqueIdentifier>{5ba18cb1-a496-45ad-ab8b-2d9bc68bcefe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileManager">
+      <UniqueIdentifier>{9aff70ef-a300-4444-8cad-c34c1cb87eae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\bullet.cpp">
+      <Filter>Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\enemy.cpp">
+      <Filter>All Objects\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\player.cpp">
+      <Filter>All Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ui.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\object_manager.cpp">
+      <Filter>All Objects\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\level_info.cpp">
+      <Filter>Level_Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\game_play_level.cpp">
+      <Filter>Game Levels\Game Play Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\splash_screen.cpp">
+      <Filter>Game Levels\SplashScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tile_info.cpp">
+      <Filter>Tile_Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\fmod_general.cpp">
+      <Filter>FMOD</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\time_manager.cpp">
+      <Filter>TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main_menu.cpp">
+      <Filter>Game Levels\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\particle.cpp">
+      <Filter>All Objects\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ending.cpp">
+      <Filter>Game Levels\Ending</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\upgrade_level.cpp">
+      <Filter>Game Levels\Upgrade Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tutorial.cpp">
+      <Filter>Game Levels\Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\advanced_enemy.cpp">
+      <Filter>All Objects\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\obstacle.cpp">
+      <Filter>All Objects\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tile.cpp">
+      <Filter>Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tile_Manager.cpp">
+      <Filter>TileManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\player.h">
+      <Filter>All Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\hreaper_general.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\hreaper_intrinsics.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\bullet.h">
+      <Filter>Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\collision.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\enemy.h">
+      <Filter>All Objects\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\vector.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ui.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\object_manager.h">
+      <Filter>All Objects\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\level_info.h">
+      <Filter>Level_Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\states_enum.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\game_play_level.h">
+      <Filter>Game Levels\Game Play Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\splash_screen.h">
+      <Filter>Game Levels\SplashScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tile_info.h">
+      <Filter>Tile_Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\fmod_general.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\time_manager.h">
+      <Filter>TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\main_menu.h">
+      <Filter>Game Levels\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\particle.h">
+      <Filter>All Objects\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ending.h">
+      <Filter>Game Levels\Ending</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\upgrade_level.h">
+      <Filter>Game Levels\Upgrade Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tutorial.h">
+      <Filter>Game Levels\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\advanced_enemy.h">
+      <Filter>All Objects\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\obstacle.h">
+      <Filter>All Objects\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tile.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tile_Manager.h">
+      <Filter>TileManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+class CameraLogic : ZilchComponent
+  {
+        [Property]
+        var TargetobjectCogPath : CogPath = null;
+
+    var TargetObject : Cog = null;
+
+    function Initialize(init : CogInitializer)
+    {
+      this.TargetObject = this.TargetobjectCogPath.Cog;
+      Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var newCameraPos = this.TargetObject.Transform.LocalTranslation;
+        
+        if(newCameraPos.X <= -15.5)
+        {
+            newCameraPos.X = -15.5;
+        }
+        
+        else if(newCameraPos.X >= 15.5)
+        {
+            newCameraPos.X = 15.5;
+        }
+        
+        newCameraPos.Y += 3;
+        
+        newCameraPos.Z = this.Owner.Transform.LocalTranslation.Z;
+        
+        this.Owner.Transform.LocalTranslation = newCameraPos;
+        
+    }
+  }

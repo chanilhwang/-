@@ -1,0 +1,30 @@
+class DroneSprite : ZilchComponent
+{
+    var DroneState : SpriteSource = SpriteSource.EnemyAnimation;
+    var DroneAttack :SpriteSource = SpriteSource.DroneAttackAnimation;
+    var DroneAttackTime : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.Sprite.SpriteSource == this.DroneState)
+        {
+            if(!this.Owner.MeleeEnemyMovement.IsAttacking)
+            {
+                this.Owner.Sprite.SpriteSource = this.DroneAttack;
+                this.DroneAttackTime = 0.5 + event.Dt;
+            }
+        }
+        
+        if(this.Owner.Sprite.SpriteSource == this.DroneAttack)
+        {
+            this.DroneAttackTime -= event.Dt;
+            if(this.DroneAttackTime <= 0)
+                this.Owner.Sprite.SpriteSource = this.DroneState;
+        }
+    }
+}

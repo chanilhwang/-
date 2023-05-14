@@ -1,0 +1,34 @@
+{
+  "Name": "ShotRate_Item",
+  "Archetype": "ShotRate_Item",
+  "Transform_Component": {
+    "translation": [
+      261.0,
+      69.5
+    ],
+    "rotation": 0.5276398658752441,
+    "scale": [
+      100.0,
+      100.0
+    ],
+    "depth": 0.5
+  },
+  "Graphics_Component": {
+    "drawspace": "World",
+    "texture": "Textures//ShotRate_Item.png"
+  },
+  "Physics_Component": {},
+  "ComponentsToBeAdded": [
+    "Item_Component",
+    "SphereCollider_Component"
+  ],
+  "Item_Component": {
+    "Item_Name": "Shot_Rate",
+    "Increased_dmg": 0,
+    "Increased_barrel": 0,
+    "Increased_hp": 0,
+    "Increased_lifetime": 0.0,
+    "Increased_speed": 0.0,
+    "decreased_delay": 1.2000000476837159
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Name": "chas",
+  "Archetype": "ChasingEnemy",
+  "Transform_Component": {
+    "translation": [
+      114.0,
+      120.5
+    ],
+    "rotation": 0.32199546694755556,
+    "scale": [
+      100.0,
+      100.0
+    ],
+    "depth": 0.5
+  },
+  "Graphics_Component": {
+    "drawspace": "World",
+    "texture": "Textures/box.png"
+  },
+  "Physics_Component": {},
+  "ComponentsToBeAdded": [
+    "Enemy_Component",
+    "SphereCollider_Component",
+    "Chase_Component"
+  ],
+  "Enemy_Component": {
+    "Max_Health": 3,
+    "Damage": 1,
+    "Color": "NULL",
+    "Shape": "NULL"
+  },
+  "SphereCollider_Component": {},
+  "Chase_Component": {
+    "Target_Name": "Player",
+    "Speed": 100.0,
+    "Delay": 2.0
+  }
+}

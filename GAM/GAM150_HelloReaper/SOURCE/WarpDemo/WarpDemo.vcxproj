@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31062567-A9C1-4CBA-9713-B68F408FC481}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WarpDemo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>HelloReaper</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)inc;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Include\</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmodL_vc.lib;WarpEngine_D.lib;opengl32.lib;glew32.lib;glu32.lib;Xinput9_1_0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>false</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Include\</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Lib;$(DXSDK_DIR)Lib\x86;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;WarpEngine.lib;opengl32.lib;glew32.lib;glu32.lib;XInput9_1_0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\advanced_enemy.cpp" />
+    <ClCompile Include="Source\bullet.cpp" />
+    <ClCompile Include="Source\camera.cpp" />
+    <ClCompile Include="Source\ending.cpp" />
+    <ClCompile Include="Source\enemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Source\fmod_general.cpp" />
+    <ClCompile Include="Source\game_play_level.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\level_info.cpp" />
+    <ClCompile Include="Source\main_menu.cpp" />
+    <ClCompile Include="Source\object_manager.cpp" />
+    <ClCompile Include="Source\obstacle.cpp" />
+    <ClCompile Include="Source\particle.cpp" />
+    <ClCompile Include="Source\player.cpp" />
+    <ClCompile Include="Source\splash_screen.cpp" />
+    <ClCompile Include="Source\tile.cpp" />
+    <ClCompile Include="Source\tile_info.cpp" />
+    <ClCompile Include="Source\tile_Manager.cpp" />
+    <ClCompile Include="Source\time_manager.cpp" />
+    <ClCompile Include="Source\tutorial.cpp" />
+    <ClCompile Include="Source\ui.cpp" />
+    <ClCompile Include="Source\upgrade_level.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\advanced_enemy.h" />
+    <ClInclude Include="Source\bullet.h" />
+    <ClInclude Include="Source\camera.h" />
+    <ClInclude Include="Source\collision.h" />
+    <ClInclude Include="Source\ending.h" />
+    <ClInclude Include="Source\enemy.h" />
+    <ClInclude Include="Source\fmod_general.h" />
+    <ClInclude Include="Source\game_play_level.h" />
+    <ClInclude Include="Source\hreaper_general.h" />
+    <ClInclude Include="Source\hreaper_intrinsics.h" />
+    <ClInclude Include="Source\level_info.h" />
+    <ClInclude Include="Source\main_menu.h" />
+    <ClInclude Include="Source\object_manager.h" />
+    <ClInclude Include="Source\obstacle.h" />
+    <ClInclude Include="Source\particle.h" />
+    <ClInclude Include="Source\player.h" />
+    <ClInclude Include="Source\splash_screen.h" />
+    <ClInclude Include="Source\states_enum.h" />
+    <ClInclude Include="Source\tile.h" />
+    <ClInclude Include="Source\tile_info.h" />
+    <ClInclude Include="Source\tile_Manager.h" />
+    <ClInclude Include="Source\time_manager.h" />
+    <ClInclude Include="Source\tutorial.h" />
+    <ClInclude Include="Source\ui.h" />
+    <ClInclude Include="Source\upgrade_level.h" />
+    <ClInclude Include="Source\vector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

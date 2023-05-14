@@ -1,0 +1,35 @@
+class PressRestart : ZilchComponent
+{
+    var StartLevel : Level = Level.StartLevel;
+    var LosingLevel : Level = Level.LosingLevel;
+    var WinningLevel : Level = Level.WinnigLevel;
+    var GameplayLevel : Level = Level.GameplayLevel;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var currentLevelName = this.Space.CurrentLevel;
+        
+        if(currentLevelName == this.WinningLevel || currentLevelName == this.LosingLevel)
+            {
+                if(Zero.Keyboard.KeyIsDown(Keys.R))
+                    {
+                        this.Space.LoadLevel(this.StartLevel);
+                    }
+            }
+            
+            
+            
+            if(currentLevelName == this.StartLevel)
+            {
+                if(Zero.Keyboard.KeyIsDown(Keys.Space))
+                {
+                    this.Space.LoadLevel(this.GameplayLevel);
+                }
+            }
+    }
+}

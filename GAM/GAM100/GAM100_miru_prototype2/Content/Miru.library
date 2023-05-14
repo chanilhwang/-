@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "Project_Dark",
+	uint64 LibraryId = 5842c77cc76ab54b,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},

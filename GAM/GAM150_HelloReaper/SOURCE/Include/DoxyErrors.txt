@@ -1,0 +1,4 @@
+C:/Users/Administrator/Dropbox/Work/Slamacow/WarpEngine/WarpEngine/Source/WEDebugTools.h:22: warning: Member WEGraphicsDrawText(const char *text, float x, float y) (function) of file WEDebugTools.h is not documented.
+C:/Users/Administrator/Dropbox/Work/Slamacow/WarpEngine/WarpEngine/Source/WEGraphics.h:28: warning: Member LoadTexture(const char *fileName) (function) of namespace WEGraphics is not documented.
+C:/Users/Administrator/Dropbox/Work/Slamacow/WarpEngine/WarpEngine/Source/WEGraphics.h:30: warning: Member UnloadTexture(int textureID) (function) of namespace WEGraphics is not documented.
+error: failed to run html help compiler on index.hhp

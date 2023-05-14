@@ -1,0 +1,17 @@
+class HitBoxLogic : ZilchComponent
+{
+    var DeltaTime : Real = 0.3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.DeltaTime -= event.Dt;
+        
+        if(this.DeltaTime <= 0)
+            this.Owner.Destroy();
+    }
+}

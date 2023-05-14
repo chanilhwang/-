@@ -1,0 +1,9 @@
+==================== Test Finds  ArraySize = 2048 Items = 64000 ====================
+ListArray Finds = 100000	Time to Insert:  154 ms	Time to Find: 245 ms
+ListArray Finds = 200000	Time to Insert:  150 ms	Time to Find: 595 ms
+ListArray Finds = 400000	Time to Insert:  153 ms	Time to Find: 1024 ms
+ListArray Finds = 800000	Time to Insert:  157 ms	Time to Find: 1904 ms
+ListArray Finds = 1600000	Time to Insert:  150 ms	Time to Find: 3901 ms
+
+Size is not proportional to Time to Insert(is always similar)
+and Size is directly proportional to Time to find

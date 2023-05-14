@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Game_Component">
+      <UniqueIdentifier>{0b18e444-a691-4639-88e9-c5132c2c5e3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stages">
+      <UniqueIdentifier>{1857a525-e308-41de-8479-9511aae51dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Background">
+      <UniqueIdentifier>{e7c23d22-7cd1-48ec-b0c4-0ce5d095246e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Items">
+      <UniqueIdentifier>{549bfdab-9611-46d4-b899-4ac3a6bb7569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag">
+      <UniqueIdentifier>{07763cdb-894a-4356-8025-216fef8805d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Player">
+      <UniqueIdentifier>{e8ae648e-bd11-4838-80c8-92b512804f06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Player\Weapons">
+      <UniqueIdentifier>{86cb4f1b-9a92-48f9-a797-43a8cb442971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Enemies">
+      <UniqueIdentifier>{057a9c6b-3139-4f86-b612-7907050a239a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Enemies\Logic_Component">
+      <UniqueIdentifier>{d1a40a2d-08e2-4417-a5a1-c8ca87d98807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Enemies\Generator">
+      <UniqueIdentifier>{5d1f857e-8d2d-4836-96b1-95ba1a18f73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Game_Logic">
+      <UniqueIdentifier>{ef23277d-557b-4ce9-b430-1e0484af8e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Game_Logic\HP_Logics">
+      <UniqueIdentifier>{c7cbf2f9-609b-43da-9f5c-dddbda9e4ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Game_Logic\Color_Logics">
+      <UniqueIdentifier>{c46b072a-3707-4a4c-8d10-241fbb6a9743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Others">
+      <UniqueIdentifier>{4b566a25-013f-41a9-8962-4bfaf1ff2c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Player\Weapons\Specific">
+      <UniqueIdentifier>{eca6af90-fc8c-4690-8cb7-fbc2b89960e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Player\Weapons\Others">
+      <UniqueIdentifier>{cfb89ae4-5e29-4c4b-8fa4-d53ea862b3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Game_Logic\Item_Logics">
+      <UniqueIdentifier>{37ec80b4-7e36-45ba-8fe2-b2cbfddc3678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Bullet">
+      <UniqueIdentifier>{c18f191a-f9b4-4d2b-b3a7-09d82edf1afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_Component\Bag\Game_Logic\Bullet_Info">
+      <UniqueIdentifier>{f3271ab7-a47f-4871-a2d9-e95c7860d784}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Edit_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Background_Component.cpp">
+      <Filter>Game_Component\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Item_Component.cpp">
+      <Filter>Game_Component\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Component.cpp">
+      <Filter>Game_Component\Bag\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Background_NO_Adv_Component.cpp">
+      <Filter>Game_Component\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Chase_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Shoot_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyGenerator_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="HP.cpp">
+      <Filter>Game_Component\Bag\Game_Logic\HP_Logics</Filter>
+    </ClCompile>
+    <ClCompile Include="DMG.cpp">
+      <Filter>Game_Component\Bag\Game_Logic\HP_Logics</Filter>
+    </ClCompile>
+    <ClCompile Include="Simple_Map_Component.cpp">
+      <Filter>Game_Component\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet_Component.cpp">
+      <Filter>Game_Component\Bag\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb_Component.cpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Pistol.cpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="Shotgun.cpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="Gatling.cpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="Gun.cpp">
+      <Filter>Game_Component\Bag\Player\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Items.cpp">
+      <Filter>Game_Component\Bag\Game_Logic\Item_Logics</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera_Logic.cpp">
+      <Filter>Game_Component\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Before_GamePlay_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlay1_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Menu_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Strafe_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Credit_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Lose_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Clear_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="GenEffect_Component.cpp">
+      <Filter>Game_Component\Bag\Enemies\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="Quit_Check_Stage.cpp">
+      <Filter>Stages</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Menu_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Edit_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Test_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Background_Component.hpp">
+      <Filter>Game_Component\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Background_NO_Adv_Component.hpp">
+      <Filter>Game_Component\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Item_Component.hpp">
+      <Filter>Game_Component\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Component.hpp">
+      <Filter>Game_Component\Bag\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Chase_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Shoot_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyGenerator_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.hpp">
+      <Filter>Game_Component\Bag\Game_Logic\Color_Logics</Filter>
+    </ClInclude>
+    <ClInclude Include="HP.h">
+      <Filter>Game_Component\Bag\Game_Logic\HP_Logics</Filter>
+    </ClInclude>
+    <ClInclude Include="DMG.h">
+      <Filter>Game_Component\Bag\Game_Logic\HP_Logics</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple_Map_Component.hpp">
+      <Filter>Game_Component\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet_Component.hpp">
+      <Filter>Game_Component\Bag\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb_Component.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Pistol.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClInclude>
+    <ClInclude Include="Shotgun.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClInclude>
+    <ClInclude Include="Gatling.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons\Specific</Filter>
+    </ClInclude>
+    <ClInclude Include="Gun.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Items.hpp">
+      <Filter>Game_Component\Bag\Game_Logic\Item_Logics</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet_Info.hpp">
+      <Filter>Game_Component\Bag\Game_Logic\Bullet_Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera_Logic.hpp">
+      <Filter>Game_Component\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Before_GamePlay_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlay1_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Main_Menu_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Strafe_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies\Logic_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Credit_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Lose_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Clear_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="GenEffect_Component.hpp">
+      <Filter>Game_Component\Bag\Enemies\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="Quit_Check_Stage.hpp">
+      <Filter>Stages</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gun_List.hpp">
+      <Filter>Game_Component\Bag\Player\Weapons</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "EnemyMovement",
+		uint64 ResourceId = 5842c6cbb33ab4cc,
+	},
+},

@@ -1,0 +1,29 @@
+#include "CS_AddSounds.hpp" 
+#include "CS_SoundTypes.hpp" 
+#include "CS_SoundManager.hpp" 
+void CS_AddSounds(void) {  
+CS_SoundManager::RegisterSound(CS_SoundTypes::Activate, "Sounds//Activate.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Back, "Sounds//Back.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::BGM, "Sounds//BGM.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Deactivate, "Sounds//Deactivate.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::EnemyHit, "Sounds//EnemyHit.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Enemy_shoot1, "Sounds//Enemy_shoot1.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Explosion1, "Sounds//Explosion1.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Explosion2, "Sounds//Explosion2.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Gatling, "Sounds//Gatling.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::GenSound, "Sounds//GenSound.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::machinegun_spin, "Sounds//machinegun_spin.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::MG_cooldown, "Sounds//MG_cooldown.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::MG_shoot, "Sounds//MG_shoot.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::MG_shot, "Sounds//MG_shot.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::MG_shotend, "Sounds//MG_shotend.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::PentagonGen, "Sounds//PentagonGen.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Pistol, "Sounds//Pistol.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Pistol_charge, "Sounds//Pistol_charge.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::PlayerHit, "Sounds//PlayerHit.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::RectangleGen, "Sounds//RectangleGen.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Select, "Sounds//Select.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Shotgun, "Sounds//Shotgun.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Shotgun_reload, "Sounds//Shotgun_reload.mp3"); 
+CS_SoundManager::RegisterSound(CS_SoundTypes::Warning, "Sounds//Warning.mp3"); 
+} 

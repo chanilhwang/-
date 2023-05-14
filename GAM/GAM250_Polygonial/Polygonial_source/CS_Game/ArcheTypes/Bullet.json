@@ -1,0 +1,13 @@
+{
+    "Transform_Component":
+    {
+    },
+  "Graphics_Component": {
+    "texture": "Textures/Bullet_White.png"
+  },
+    "Physics_Component":
+    {
+
+    },
+    "ComponentsToBeAdded":["Bullet_Component", "SphereCollider_Component"]
+}

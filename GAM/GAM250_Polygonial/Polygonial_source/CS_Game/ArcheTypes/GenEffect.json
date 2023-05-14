@@ -1,0 +1,13 @@
+{
+    "Transform_Component":
+    {
+    },
+    "Graphics_Component":
+    {
+    },
+    "Physics_Component":
+    {
+
+    },
+    "ComponentsToBeAdded":["GenEffect_Component"]
+}

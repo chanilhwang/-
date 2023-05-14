@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{de4d1b8c-d96c-4258-9fe3-9c25e03299d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{c90163fd-3e44-4c78-9231-aa40c9398c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{488a2009-170d-4fa4-9fba-7b613305fa1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Stages">
+      <UniqueIdentifier>{2f8d15bd-642c-4573-a7b0-d9f5d9570c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Stages\StageTypes">
+      <UniqueIdentifier>{9215218b-136d-4971-af77-f64254fed0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Components">
+      <UniqueIdentifier>{c117d102-d2fd-4c65-9411-610fe5937af3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Components\ComponentsTypes">
+      <UniqueIdentifier>{72325a2d-bc6a-4484-bf4b-a7cf9eee8d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Default">
+      <UniqueIdentifier>{7e269751-9b9a-45e5-aeb5-e98d4eb8ec6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Default\Gfx">
+      <UniqueIdentifier>{ac44bacb-3533-4d7b-a19b-ea80e3d1657f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Physic">
+      <UniqueIdentifier>{7bc6bd25-1e31-4d4b-9f12-18a9f09158ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Physic\Collider">
+      <UniqueIdentifier>{8ae06d35-1da2-4daf-9548-22021c99042d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Physic\Collider\BASE">
+      <UniqueIdentifier>{669005fa-107f-4ffc-91c0-edc7b0323400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{036c3fe3-9c84-4830-8905-65e64b30c425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons">
+      <UniqueIdentifier>{3cb7a66b-1a25-4d3a-af1d-a09bba861adf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\App">
+      <UniqueIdentifier>{83878d70-a707-4dcc-af80-409d2e79d31c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\App\Input">
+      <UniqueIdentifier>{b5a63c2e-c164-43bd-b351-5e2afce46647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Graphics">
+      <UniqueIdentifier>{6d0505d7-0423-4c2a-b0ee-2fa016be3138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Graphics\Shader">
+      <UniqueIdentifier>{b41fc39c-6cdb-4711-a00b-39a9dee7e044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Graphics\Camera">
+      <UniqueIdentifier>{631737e2-c63a-4f66-ab55-2e07b39d6a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Graphics\TextureManager">
+      <UniqueIdentifier>{bc94692a-291f-4d78-9e57-c84a3db110ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\StageManager">
+      <UniqueIdentifier>{c66f1396-f14a-49cd-b18a-b6d3e6ade96c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Physics">
+      <UniqueIdentifier>{88ff9641-95aa-4fb4-bd6d-63db9599cb85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\ObjectManager">
+      <UniqueIdentifier>{0eb50b78-7389-47b4-9c75-2412224413fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\ObjectManager\ArcheTypes">
+      <UniqueIdentifier>{985507a1-6565-46a1-889c-919536298689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\GUI">
+      <UniqueIdentifier>{57242e94-6954-457b-9fe6-1532f529eb8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\GUI\IMGUI">
+      <UniqueIdentifier>{a915d42d-d16c-423a-9ced-8a366119513f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Sound">
+      <UniqueIdentifier>{f12ca1e3-e3db-41f3-a3a5-5b4952f3e4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Editor">
+      <UniqueIdentifier>{e0b587df-886f-48c6-a4e8-bcbd205f3ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\JsonManager">
+      <UniqueIdentifier>{04bc6f79-b798-4275-b2e0-e40481376094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Singletons\Math">
+      <UniqueIdentifier>{83900fb3-f435-4502-9a58-16930857deca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{bb34409f-a83b-4efc-beca-74ffb2525801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Option">
+      <UniqueIdentifier>{c7c8bd5f-3b91-4af0-bacc-b7cf8709ab9c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CS_Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Application.cpp">
+      <Filter>Core\Singletons\App</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Graphics.cpp">
+      <Filter>Core\Singletons\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Color.cpp">
+      <Filter>Core\Singletons\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Shader.cpp">
+      <Filter>Core\Singletons\Graphics\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_ShaderSource.cpp">
+      <Filter>Core\Singletons\Graphics\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_StageBuildFactory.cpp">
+      <Filter>Factory\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_StageManager.cpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_AddStages.cpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Physics.cpp">
+      <Filter>Core\Singletons\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Input.cpp">
+      <Filter>Core\Singletons\App\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_ObjectManager.cpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Camera.cpp">
+      <Filter>Core\Singletons\Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Math.cpp">
+      <Filter>Core\Singletons\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_ComponentBuildFactory.cpp">
+      <Filter>Factory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_TextureManager.cpp">
+      <Filter>Core\Singletons\Graphics\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_AddComponents.cpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Components.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Timer_Frame.cpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider_Component.cpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_ColliderComponent.cpp">
+      <Filter>Components\Physic\Collider\BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_GUI.cpp">
+      <Filter>Core\Singletons\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_demo.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_draw.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_widgets.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_impl_win32.cpp">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_SoundManager.cpp">
+      <Filter>Core\Singletons\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_JsonManager.cpp">
+      <Filter>Core\JsonManager</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB_BoxCollider_Component.cpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_AddArcheTypes.cpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics_Component.cpp">
+      <Filter>Components\Default\Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Mesh.cpp">
+      <Filter>Components\Default\Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics_Component.cpp">
+      <Filter>Components\Physic</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform_Component.cpp">
+      <Filter>Components\Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_EditMouseSelectAABB.cpp">
+      <Filter>Components\Default</Filter>
+    </ClCompile>
+    <ClCompile Include="OBB_BoxCollider_Component.cpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Editor.cpp">
+      <Filter>Core\Singletons\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_ResourceLists.cpp">
+      <Filter>Core\Singletons\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_AddSounds.cpp">
+      <Filter>Core\Singletons\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Particle.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="CS_Option.cpp">
+      <Filter>Option</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CS_Object.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_WinHeader.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Application.hpp">
+      <Filter>Core\Singletons\App</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Graphics.hpp">
+      <Filter>Core\Singletons\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Color.hpp">
+      <Filter>Core\Singletons\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Shader.hpp">
+      <Filter>Core\Singletons\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ShaderSource.hpp">
+      <Filter>Core\Singletons\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_StageBuildFactory.hpp">
+      <Filter>Factory\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_StageBuilder.hpp">
+      <Filter>Factory\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_StageTypes.hpp">
+      <Filter>Factory\Stages\StageTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_StageManager.hpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_GameData.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Factory.hpp">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Builder.hpp">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_AddStages.hpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Physics.hpp">
+      <Filter>Core\Singletons\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Input.hpp">
+      <Filter>Core\Singletons\App\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ObjectManager.hpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Camera.hpp">
+      <Filter>Core\Singletons\Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Math.hpp">
+      <Filter>Core\Singletons\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ComponentBuilder.hpp">
+      <Filter>Factory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ComponentTypes.hpp">
+      <Filter>Factory\Components\ComponentsTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ComponentBuildFactory.hpp">
+      <Filter>Factory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_TextureManager.hpp">
+      <Filter>Core\Singletons\Graphics\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_AddComponents.hpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Stages.hpp">
+      <Filter>Factory\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Components.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Timer_Frame.hpp">
+      <Filter>Core\Singletons\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ColliderComponent.hpp">
+      <Filter>Components\Physic\Collider\BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider_Component.hpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_GUI.hpp">
+      <Filter>Core\Singletons\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imconfig.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui_impl_opengl3.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui_internal.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imstb_rectpack.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imstb_textedit.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imstb_truetype.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui_impl_win32.h">
+      <Filter>Core\Singletons\GUI\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_SoundManager.hpp">
+      <Filter>Core\Singletons\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_JsonManager.hpp">
+      <Filter>Core\JsonManager</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB_BoxCollider_Component.hpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ArcheTypes.hpp">
+      <Filter>Core\Singletons\ObjectManager\ArcheTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_AddArcheTypes.hpp">
+      <Filter>Core\Singletons\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics_Component.hpp">
+      <Filter>Components\Default\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Mesh.hpp">
+      <Filter>Components\Default\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics_Component.hpp">
+      <Filter>Components\Physic</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform_Component.hpp">
+      <Filter>Components\Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_EditMouseSelectAABB.hpp">
+      <Filter>Components\Default</Filter>
+    </ClInclude>
+    <ClInclude Include="OBB_BoxCollider_Component.hpp">
+      <Filter>Components\Physic\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Editor.hpp">
+      <Filter>Core\Singletons\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_ResourceLists.hpp">
+      <Filter>Core\Singletons\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_SoundTypes.hpp">
+      <Filter>Core\Singletons\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_AddSounds.hpp">
+      <Filter>Core\Singletons\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Particle.hpp">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="CS_Option.hpp">
+      <Filter>Option</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CS_Engine.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\CS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

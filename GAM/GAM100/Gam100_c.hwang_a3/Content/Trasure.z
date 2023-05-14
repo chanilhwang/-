@@ -1,0 +1,59 @@
+class Trasure : ZilchComponent
+{
+    var Trasure : Integer = 0;
+     var HUDSpace : Space = null;
+    var Banana1 : Cog = null;
+  var Banana2 : Cog = null;
+  var Banana3 : Cog = null;
+  var Text : Cog = null;
+  
+  [Property]
+  var Player : CogPath = null;
+  
+    function Initialize(init : CogInitializer)
+    {
+        this.HUDSpace = this.Space.LevelSettings.HUDCreator.HUDSpace;
+        var hudSpaceRefs = this.HUDSpace.LevelSettings.HUDSpaceReferences;
+        this.Banana1 = hudSpaceRefs.Banana1.Cog;
+    this.Banana2 = hudSpaceRefs.Banana2.Cog;
+    this.Banana3 = hudSpaceRefs.Banana3.Cog;
+    this.Text = hudSpaceRefs.Text.Cog;
+    
+        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        
+        var player = this.Player.Cog.Token.Banana;
+        
+        if(otherObject.Name == "Player")
+        {
+            this.Trasure = player;
+            
+            if(this.Trasure == 1)
+            {
+                this.Banana1.Sprite.Visible = true;
+                this.Text.SpriteText.Text = "Banana: 1";
+            }
+            
+            if(this.Trasure == 2)
+            {
+                this.Banana1.Sprite.Visible = true;
+                this.Banana2.Sprite.Visible = true;
+                this.Text.SpriteText.Text = "Banana: 2";
+            }
+            
+            if(this.Trasure == 3)
+            {
+                this.Banana1.Sprite.Visible = true;
+                this.Banana2.Sprite.Visible = true;
+                this.Banana3.Sprite.Visible = true;
+                this.Text.SpriteText.Text = "Banana: 3(full)";
+            }
+            
+            this.Owner.Destroy();
+}
+    }
+}

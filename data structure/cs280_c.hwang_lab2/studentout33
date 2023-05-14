@@ -1,0 +1,20 @@
+==================== Test Sorts  ArraySize = 2048 ====================
+	Time to Insert 8000 Items:  3 ms
+	Time to push & sort 8000 Items:  22 ms
+
+	Time to Insert 16000 Items:  7 ms
+	Time to push & sort 16000 Items:  86 ms
+
+	Time to Insert 32000 Items:  11 ms
+	Time to push & sort 32000 Items:  341 ms
+
+	Time to Insert 64000 Items:  24 ms
+	Time to push & sort 64000 Items:  1402 ms
+
+	Time to Insert 128000 Items:  58 ms
+	Time to push & sort 128000 Items:  5633 ms
+
+	//Time to Insert
+	//O(N) = N (Linear)
+	//Time to push&sort
+	//O(N) = N^2 (Quadratic)

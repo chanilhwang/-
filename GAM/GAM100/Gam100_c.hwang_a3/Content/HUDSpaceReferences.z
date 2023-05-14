@@ -1,0 +1,16 @@
+class HUDSpaceReferences : ZilchComponent
+{
+  var MainSpaceRef : Space = null;
+
+  [Property]
+  var Banana1 : CogPath = null;
+
+  [Property]
+  var Banana2 : CogPath = null;
+
+  [Property]
+  var Banana3: CogPath = null;
+
+  [Property]
+  var Text : CogPath = null;
+}

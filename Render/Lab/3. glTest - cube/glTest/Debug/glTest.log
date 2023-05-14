@@ -1,0 +1,18 @@
+﻿  gl3w.c
+D:\Private\Sc\전공\Render\Lab\3. glTest - cube\glTest\gl3w.c(224,5): warning C4273: 'gl3wInit': dll 연결이 일치하지 않습니다.
+C:\vcpkg\installed\x86-windows\include\GL\gl3w.h(57,14): message : 'gl3wInit'의 이전 정의를 참조하십시오.
+D:\Private\Sc\전공\Render\Lab\3. glTest - cube\glTest\gl3w.c(236,5): warning C4273: 'gl3wInit2': dll 연결이 일치하지 않습니다.
+C:\vcpkg\installed\x86-windows\include\GL\gl3w.h(58,14): message : 'gl3wInit2'의 이전 정의를 참조하십시오.
+D:\Private\Sc\전공\Render\Lab\3. glTest - cube\glTest\gl3w.c(242,5): warning C4273: 'gl3wIsSupported': dll 연결이 일치하지 않습니다.
+C:\vcpkg\installed\x86-windows\include\GL\gl3w.h(59,14): message : 'gl3wIsSupported'의 이전 정의를 참조하십시오.
+D:\Private\Sc\전공\Render\Lab\3. glTest - cube\glTest\gl3w.c(251,12): warning C4273: 'gl3wGetProcAddress': dll 연결이 일치하지 않습니다.
+C:\vcpkg\installed\x86-windows\include\GL\gl3w.h(60,21): message : 'gl3wGetProcAddress'의 이전 정의를 참조하십시오.
+  main.cpp
+  MyGlWindow.cpp
+  MyGlWindow.h
+  코드를 생성하고 있습니다...
+Debug\MyGlWindow.obj : warning LNK4042: 개체가 두 번 이상 지정되었습니다. 나머지는 무시됩니다.
+gl3w.lib(gl3w.dll) : error LNK2005: _gl3wInit이(가) gl3w.obj에 이미 정의되어 있습니다.
+gl3w.lib(gl3w.dll) : error LNK2005: _gl3wIsSupported이(가) gl3w.obj에 이미 정의되어 있습니다.
+     D:\Private\Sc\전공\Render\Lab\3. glTest - cube\Debug\glTest.lib 라이브러리 및 D:\Private\Sc\전공\Render\Lab\3. glTest - cube\Debug\glTest.exp 개체를 생성하고 있습니다.
+D:\Private\Sc\전공\Render\Lab\3. glTest - cube\Debug\glTest.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.

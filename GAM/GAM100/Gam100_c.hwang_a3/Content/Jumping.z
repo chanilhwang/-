@@ -1,0 +1,21 @@
+class Jumping : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        
+        if(otherObject.Name == "Player")
+        {
+            otherObject.SweptController.Grounded = true;
+            otherObject.SweptController.JumpSize = 10;
+          
+            otherObject.SweptController.Jump();
+            otherObject.SweptController.JumpSize = 1.5;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+Name: Chanil, Hwang
+Role: Technical Director
+Main Contributions: Tutorial, Object Manager, HUD, Enemy AI
+Files: tutorial.cpp, object_manager.cpp, advanced_enemy.cpp, ui.cpp
+Personal Notes: (Linked List) :	I used linked list in object manager.
+				In that time, I didn't know about linked list so I spend four hours to find out what linked list is and how I use it.
+ 				However, it is not used because gyu hyeun did not want to change object manager I made before.
+				He did not want to change it because object manager I made before was working well and too many codes used it.
+				But, it has helped me to understand and remember linked list.
+		(Class CleanUp):I don't think I used class very well in this GAM150 project, but I get the feel of how to use class.
+				I need to be careful of class that is shared with my teammates and if I need to change it, I must tell other teammates
+				or make new class because my teammates used that class and if I change it as I like, teammates who don't know
+				that the class is changed can be confused.

@@ -1,0 +1,164 @@
+{
+    "objects": [
+          {
+            "Name": "how_to_pick",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    -350.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    700.0,
+                    60.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/select_instruct.png"
+            },
+            "Physics_Component": {}
+            
+        },
+        {
+            "Name": "Pistol",
+            "Archetype": "NewObject",
+            "Transform_Component": {
+                "translation": [
+                    -512.0,
+                    40.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                    412.0,
+                    601.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/pistol_intro.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+            ]
+        },
+        {
+            "Name": "Shotgun",
+            "Archetype": "Enemy",
+            "Transform_Component": {
+                "translation": [
+                    0.0,
+                    40.0
+                ],
+                "rotation": 0.0,
+                "scale": [
+                  412.0,
+                  601.0
+                ],
+                "depth": 0.5
+            },
+            "Graphics_Component": {
+                "drawspace": "Hud",
+                "texture": "Textures/shot_gun_intro.png"
+            },
+            "Physics_Component": {},
+            "ComponentsToBeAdded": [
+            ]
+        },
+      {
+        "Name": "Gatling",
+        "Archetype": "NewObject",
+        "Transform_Component": {
+          "translation": [
+            512.0,
+            40.0
+          ],
+          "rotation": 0.0,
+          "scale": [
+            412.0,
+            601.0
+          ],
+          "depth": 0.5
+        },
+        "Graphics_Component": {
+          "drawspace": "Hud",
+          "texture": "Textures/machine_intro.png"
+        },
+        "Physics_Component": {},
+        "ComponentsToBeAdded": [
+        ]
+      },
+      {
+        "Name": "Pistol_select",
+        "Archetype": "NewObject",
+        "Transform_Component": {
+            "translation": [
+                -512.0,
+                40.0
+            ],
+            "rotation": 0.0,
+            "scale": [
+                512.0,
+                601.0
+            ],
+            "depth": 0.5
+        },
+        "Graphics_Component": {
+            "drawspace": "Hud",
+            "texture": "Textures/Invisible.png"
+        },
+        "Physics_Component": {},
+        "ComponentsToBeAdded": [
+        ]
+    },
+    {
+        "Name": "Shotgun_select",
+        "Archetype": "Enemy",
+        "Transform_Component": {
+            "translation": [
+                0.0,
+                40.0
+            ],
+            "rotation": 0.0,
+            "scale": [
+                512.0,
+                601.0
+            ],
+            "depth": 0.5
+        },
+        "Graphics_Component": {
+            "drawspace": "Hud",
+            "texture": "Textures/Invisible.png"
+        },
+        "Physics_Component": {},
+        "ComponentsToBeAdded": [
+        ]
+    },
+  {
+    "Name": "Gatling_select",
+    "Archetype": "NewObject",
+    "Transform_Component": {
+      "translation": [
+        512.0,
+        40.0
+      ],
+      "rotation": 0.0,
+      "scale": [
+        512.0,
+        601.0
+      ],
+      "depth": 0.5
+    },
+    "Graphics_Component": {
+      "drawspace": "Hud",
+      "texture": "Textures/Invisible.png"
+    },
+    "Physics_Component": {},
+    "ComponentsToBeAdded": [
+    ]
+  }
+    ]
+}
